@@ -1,0 +1,379 @@
+header{
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+	position: fixed;
+	left: 0;
+	top: 0;
+	box-shadow: 0px 1px 1px #888888;
+	-moz-box-shadow: 0px 1px 1px #888888;
+	z-index: 6;
+}
+.container{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.container > div{
+	float: left;
+}
+
+
+/*header部分*/
+.container .logoContent img{
+	height: 80px;
+}
+.container .searchContent{
+	margin-top: 15px;
+	margin-left: 400px;
+	float: left;
+	position: relative;
+}
+.container .searchContent .searchText{
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 10px;
+	border: 0;
+	padding-left: 30px;
+	border: 1px solid #8C9CE4;
+	box-sizing: border-box;
+	background: url(../image/search.png) no-repeat left center;
+}
+.container .searchContent .searchButton{
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 10px;
+	border: 0 ;
+	font-size: 16px;
+	cursor: pointer;
+	background: #AEB6D8;
+}
+.container .searchContent .searchButton:hover{
+	background:#8C9CE4;
+}
+.container .searchContent .searchUl{
+	width: 270px;
+	overflow: hidden;
+	position: absolute;
+	top: 40px;
+	left: 30px;
+	box-shadow: 0px 0px 1px #999;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	display: none;
+}
+.container .searchContent .searchUl li{
+	height: 40px;
+	line-height: 40px;
+	color: #34495e;
+	padding-left: 10px;
+	background-color: #fff;
+}
+.container .searchContent .searchUl li:hover{
+	background-color: #f9fafb;
+}
+.container .userBehavior{
+	float: right;
+	cursor: pointer;
+	position: relative;
+}
+.container .userBehavior .userContent{
+	width: 240px;
+	height: 150px;
+	border: 1px solid #999;
+	position: absolute;
+	left: -35px;
+	top: 65px;
+	background: #fff;
+	border-radius: 5px;
+	display: none;
+}
+.container .userBehavior .userContent:before{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 16px solid transparent;
+	border-bottom: 16px solid #999;
+	position: absolute;
+	left: 112px;
+	top: -32px;
+}
+.container .userBehavior .userContent:after{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom: 15px solid #fff;
+	position: absolute;
+	left: 113px;
+	top: -30px;
+}
+.container .userBehavior .userCheck{
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	float: left;
+	margin: 15px 5px;
+	padding-left: 15px;
+	background: url(../image/userCheck.png) no-repeat left center;
+}
+/*公共点击输入框*/
+.formFocus{
+	border: 1px solid #472AF5;
+	box-shadow: 0px 0px 2px #888;
+}
+.userLogo{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background: url(../image/userNormal.png);
+	border-radius: 40px;
+	margin: 15px 5px;
+	float: left;
+}
+.userName{
+	float: left;
+	color: #34495e;
+}
+/*置顶*/
+.toTop{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border-radius: 50%;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background: url(../image/toTop.png) no-repeat 16px 0px;
+	background-color: #B8B3B3;
+	transition: background 0.2s;
+	-moz-transition:background 0.2s;
+	-webkit-transition:background 0.2s;
+	-o-transition:background 0.2s;
+}
+.toTop:hover{
+	background-color: #2E88CE;
+	background-position-x:-48px;
+}
+/*提示框*/
+.mask{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	background: rgba(186,186,186,0.5);
+}
+.mask .maskContent {
+	position: fixed;
+	width: 174px;
+	border-radius: 5px;
+	background-color: #fff;
+	left: 50%;
+	margin-left: -97px;
+	top: 40%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	text-align: center;
+	padding: 0 10px 20px;
+}
+.mask .maskContent i {
+	display: block;
+	width: 52px;
+	height: 52px;
+	margin: 20px auto 10px;
+}
+
+.mask .maskContent .icon1 {
+	background-image: url("../image/icon_22.png");
+}
+
+.mask .maskContent .icon2 {
+	background-image: url("../image/icon_20.png");
+}
+
+.mask .maskContent .icon3 {
+	background-image: url("../image/icon_21.png");
+}
+
+.mask .maskContent span {
+	font-size: 16px;
+	color: #34495e;
+	line-height:20px;
+}
+/*加载*/
+.loadingMask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 19999999;
+}
+/*登录注册*/
+/*遮罩层*/
+.maskDiv{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0.4;
+	z-index: 10;
+	display: none;
+}
+
+#loginMaskDiv{
+	width: 400px;
+	height: 270px;
+	position: fixed;
+	background: #fff;
+	z-index: 15;
+	border-radius: 10px;
+}
+.userMaskDiv{
+	position: relative;
+}
+#loginMaskDiv h3, #registerMaskDiv h3{
+	padding: 10px;
+	margin-bottom: 20px;
+}
+#loginMaskDiv b, #registerMaskDiv b{
+	background: url(../image/boxy_btn.png) no-repeat;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	position: absolute;
+	right: -10px;
+	top:-10px;
+	cursor: pointer;
+}
+#registerMaskDiv{
+	width: 450px;
+	height: 365px;
+	position: fixed;
+	background: #fff;
+	box-shadow: 0px 1px 1px #888888;
+	z-index: 15;
+	border-radius: 10px;
+}
+#logRegDiv form .rowDiv{
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+	margin: 10px auto;
+	position: relative;
+}
+.spanNormal{
+	background: url(../image/blank.png) no-repeat;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	position: absolute;
+	right: 27px;
+	top: 11px;
+}
+.ok{
+	background: url(../image/ok.png) no-repeat;
+}
+#logRegDiv form .rowDiv .userSetting{
+	float: left;
+}
+#logRegDiv form .rowDiv .rightInput{
+	padding: 5px;
+	border-radius: 10px;
+	border: 0;
+	border: 1px solid #8C9CE4;
+	width: 200px;
+}
+.chooseSave{
+	margin-left: 40%;
+}
+#logRegDiv form .userSetting{
+	width: 130px;
+	text-align: right;
+	font-size: 16px;
+}
+
+.userBtn{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	background: #8C9CE4;
+	border: 0;
+	border-radius: 15px;
+	font-size: 16px;
+	display: block;
+	margin: 0 auto;
+}
+.checkBtn{
+	margin-top: 5px;
+}
+.tipDiv{
+	width: 150px;
+	height: 30px;
+	margin: 0 auto;
+	padding-left: 40px;
+	background: url(../image/blank.png) no-repeat; 
+}
+.tipDivWrong{
+	background: url(../image/unok.png) no-repeat; 
+}
+.tipDivTrue{
+	background: url(../image/ok.png) no-repeat;
+}
+
+
+/*分页*/
+.paging{
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+}
+.paging li{
+	float: left;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 0 5px;
+}
+.paging li.on{
+	background: #CBDBF3;
+}
+.paging li#turnTo{
+	background: #B4BFE4;
+	margin-left: 5px;
+	border-radius: 5px;
+}
+.paging li#turnTo:hover{
+	background: #8A99F2
+}
+
+
+/*加载等待*/
+.loadingMask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 19999999;
+}
+
+.loadingMask img {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 50%;
+	top: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
+}

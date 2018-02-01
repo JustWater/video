@@ -1,0 +1,171 @@
+.allContent{
+	width: 100%;
+	position: relative;
+	z-index: 5;
+}
+
+/*轮播图*/
+section{
+	width: 100%;
+}
+.bannerBox{
+	margin: 0 auto;
+	width: 790px;
+	height: 340px;
+	overflow: hidden;
+	position: relative;
+	padding-top: 80px;
+}
+#imgBanner{
+	width: 5530px;
+	position: absolute;
+	z-index: 3;
+}
+#imgBanner img{
+	float: left;
+}
+.bannerBox .positionMove{
+	width: 50px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	background: #000;
+	opacity: 0.3;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	z-index: 5;
+	color: #fff;
+	font-size: 28px;
+	cursor: pointer;
+	display: none;
+}
+.bannerBox:hover .positionMove{
+	display: block;
+}
+.bannerBox .positionMove:hover{
+	opacity: 0.6;
+}
+#prevPosition{
+	left: 0;
+}
+#nextPosition{
+	right: 0;
+}
+#bannerBox ul{
+	position: absolute;
+	height: 20px;
+	z-index: 5;
+	bottom: 15px;
+	left: 50%;
+	margin-left: -50px;
+}
+#bannerBox ul li{
+	float: left;
+	width: 10px;
+	margin-right: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: #fff;
+}
+#bannerBox ul li.active{
+	background: red;
+}
+
+
+/*视频推荐*/
+.videoContent{
+	height: 600px;
+	border: 1px solid blue;
+	margin-top: 70px;
+}
+.navHeader{
+	width: 100%;
+	height: 70px;
+	border: 1px solid red;
+}
+.navHeader .navLeft{
+	float: left;
+	padding-left: 70px;
+	line-height: 70px;
+	font-size: 18px;
+	background: url(../image/navLogo1.png) no-repeat left center;
+}
+.navHeader .navRight{
+	float: right;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 19px;
+	text-align: center;
+	border:1px solid #ccd0d7;
+	border-radius: 10px;
+	font-size: 12px;
+	color: #555;
+	padding-left: 15px;
+	padding-right: 30px;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.navHeader .navRight:hover{
+	padding-left: 5px;
+	width: 50px;
+	background-color: #ccc;
+}
+.navHeader .navRight .icon{
+	background: url(../image/arr_l.png) no-repeat;
+	width: 9px;
+	height: 15px;
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	transition: all 0.3s;
+}
+.navHeader .navRight:hover .icon{
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}	
+.navContent ul li{
+	float: left;
+	width: 275px;
+	height: 200px;
+	overflow: hidden;
+	margin-right: 30px;
+	margin-top: 30px;
+	position: relative;
+	cursor: pointer;
+}
+.navContent ul>li:first-child{
+	margin-left: 5px
+}
+.navContent ul>li:last-child{
+	margin-right: 5px;
+}
+.navContent ul li a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.navContent ul li a img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+
+}
+.navContent ul li .shade{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 10px;
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.navContent ul li:hover .shade{
+	display: block;
+}

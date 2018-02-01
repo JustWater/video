@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.loadingMask {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 19999999;
+	}
+
+	.loadingMask img {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: 50%;
+		top: 50%;
+		margin-left: -20px;
+		margin-top: -20px;
+	}
+</style>
+</head>
+<body>
+	<button id="aa">asd</button>
+	<p id ="bb"></p>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		var aa = $("#aa");
+		// $(document).on('click','#aa',function(){
+		// 	$.ajax({
+		// 		url:"http://zmhwater.vicp.io/videos/2",
+		// 		type:'GET',
+		// 		async:true, 
+		// 		dataType:"json",
+		// 		contentType:"application/json;charset=UTF-8",
+		// 		success:function(result){
+		// 			console.log(result)
+		// 		},
+		// 		error:function(result){
+		// 			alert(2)
+		// 		},
+		// 	})
+		// })
+		// jQuery.ajaxPost = function (url, data, successfn, isLoadingShow) {
+		// 	var oDiv;
+		// 	$.ajax({
+		// 		url: url,
+		// 		contentType: "application/json; charset=utf-8",
+		// 		type: 'POST',
+		// 		data: JSON.stringify(data),
+		// 		success: function (result) {
+		// 			if (result.success) {
+		// 				successfn && successfn(result);
+		// 			} else {
+		// 				if(result.needLogIn){
+		// 					location=result.loginUrl
+		// 				}else{
+		// 					showMask('error', result.error);
+		// 				}
+		// 			}
+		// 		},
+		// 		error: function (jqXHR, status, error) {
+		// 			if (error.length > 0) {
+		// 				showMask('error', error);
+		// 			}
+		// 			else {
+		// 				showMask('error', '出错了！请刷新页面试试~');
+		// 			}
+		// 		},
+		// 		beforeSend: function (jqXHR, settings) {
+		// 			if (isLoadingShow == undefined || isLoadingShow == true) {
+		// 				oDiv=alertLoading();
+		// 			}
+		// 		},
+		// 		complete: function (jqXHR, status) {
+		// 			if(oDiv) oDiv.remove();
+		// 		}
+		// 	})
+
+		// };
+		jQuery.ajaxGet = function (url,successfn,data) {
+			var oDiv ;
+			$.ajax({
+				url: url,
+				type:'GET',
+				async:true, 
+				dataType:"json",
+				data:"data",
+				contentType:"application/json;charset=UTF-8",
+				success: function (result) {
+					successfn(result);
+				},
+				error: function () {
+					// showMask("error","发生错误");
+					alert(1)
+				},
+				beforeSend:function(){
+					oDiv = alertLoading();
+				},
+				complete:function(){
+					if (oDiv) {
+						oDiv.remove();
+					}
+				}
+			})
+
+		};
+		function alertLoading() {
+			var oDiv = $('<div class="loadingMask"><img src="image/loading1.gif"/></div>');
+			$('body').append(oDiv); 
+			return oDiv;
+		}
+		$(document).on('click','#aa',function(){
+			$.ajaxGet("http://zmhwater.vicp.io/videos/2",function(result){
+				console.log(result)
+			})
+		})
+
+	</script>
+</body>
+</html>

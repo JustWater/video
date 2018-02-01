@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- <script type="text/javascript" src="video.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="js/video-js/video-js.css">
+    <!-- <link rel="stylesheet" href="video-js.min.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mainPlayVideo.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/video-js/video.dev.js"></script>
+    <script type="text/javascript" src="js/videoPlayPage.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+    <div id="toTop" class="toTop"></div>
+    <header>
+        <div class="container">
+            <div class="logoContent">
+                <img src="" alt="logo"/>
+            </div> 
+            <form class="searchContent">
+                <input type="text" placeholder="jazz" class="searchText" />
+                <button class="searchButton">搜索</button>
+                <ul class="searchUl" id="searchUl">
+                    <li>aa</li>
+                    <li>bb</li>
+                    <li>cc</li>
+                    <li>dd</li>
+                    <li>ee</li>
+                    <li>ff</li>
+                </ul>
+            </form>
+            <div class="userBehavior">
+                <div id="login" class="userCheck login">登录</div>
+                <div id="register" class="userCheck register">注册</div>
+                <div id="userContent" class="userContent"></div>
+            </div>
+        </div>
+    </header>
+    <div class="videoPlay">
+        <div class="navHeader">
+            <div class="navLeft">
+                推荐
+            </div>
+            <div class="navRight">
+                更多
+                <i class="icon"></i>
+            </div>
+        </div>
+        <div class="videoPlayCenter">
+            <video id="example_video_1" class="video-js vjs-default-skin" width="800px" height="600px" autoplay controls preload="none" poster='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516941777889&di=7b8da7c3b567e4d4bb35eb42ce6a97ef&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3Daf9fe38bb2014a9095334efdc00f5c7e%2F03087bf40ad162d9435b3e251adfa9ec8a13cd56.jpg' data-setup=' {"playbackRates": [1, 1.5, 2] }'>
+                <!-- <source src="" type='video/mp4' /> -->
+                <!-- <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' /> -->
+                <!-- <track kind="captions" src="../shared/example-captions.vtt" srclang="en" label="English"></track> -->
+                <!-- Tracks need an ending tag thanks to IE9 -->
+                <!-- <track kind="subtitles" src="../shared/example-captions.vtt" srclang="en" label="English"></track> -->
+                <!-- Tracks need an ending tag thanks to IE9 -->
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+            </video>
+            <div class="recommendDiv">
+                <h2>相关视频推荐</h2>
+                <div class="prev"></div>
+                <ul class="commendContent">
+                    <li><a href="javascript:void(0);">asdsd</a></li>
+                    <li><a href="javascript:void(0);">asdsd</a></li>
+                    <li><a href="javascript:void(0);">asdsd</a></li>
+                </ul>
+                <div class="next"></div>
+            </div>
+        </div>
+    </div>
+    <div class="commentHotPlay">
+        <div class="commentHotPlayDiv">
+            <div class="commentDiv">
+                <div class="paging" id="paging">
+                    <ul>
+                        <li id="pageFirst">首页</li>
+                        <li id="pagePrev" style="display: none;">上一页</li>
+                        <li>
+                            <ul class="putPageNum">
+                                <li index ="1" class="pageNum on">1</li>
+                            </ul>
+                        </li>
+                        <li id="pageNext">下一页</li>
+                        <li id="pageLast">尾页</li>
+                        <li>
+                            <select id="sel">
+                                <option selected="selected" value="1" class="chooseOption">1</option>
+                            </select>
+                        </li>
+                        <li id="turnTo">跳转</li>
+                    </ul>
+                </div>
+                <div class="introVideoDiv">
+                    <div class="author">
+                        <span>上传人：</span>
+                        <i>Just</i>
+                        <b class="download">下载</b>
+                        <b class="collect">收藏</b>
+                    </div>
+                    <div class="videoIntro">
+                        <span>视频简介：</span>
+                        <i>asjdhashdashdajshdkaaaaaaaaaaaaaaaaaaaaaaaaadasjdhashdashdajshdkaaaaaaaaaaaaaaaaaaaaaadasjdhashdashdajshdkaaaaaaaaaaaaaaaaaaaaaaaaad</i>
+                    </div>
+                    <h2 class="commentWord">全 部 评 论：</h2>
+                </div>
+                <div class="commentArea">
+                    <div class="userSelf">
+                        <img src="image/userLogo/user1.png" class="userImg">
+                        <span class="userName self">jasda</span>
+                        <!-- <div>
+                            <div class="loginDiv"><span class="login">登录</span></div>
+                            <div class="registerDiv"><span class="register">注册</span></div>
+                        </div> -->
+                    </div>
+                    <textarea class="commentInput commentSelf" placeholder="请输入..."></textarea>
+                    <a href="javascript:;" class="commentBtn cBtn">评论</a>
+                    <span class="wordNum"><i class="numChange">0&nbsp;</i>/&nbsp;140</span>
+                </div>
+                <div class="commentList">
+                    <div class="commentPer">
+                        <img src="image/userLogo/user1.png" class="userImg userComment">
+                        <div class="userMes">
+                            <div class="userBlock">
+                                <div class="userAbout">
+                                    <span class="userName">张三：</span>
+                                    <i>来盛大的</i>
+                                </div>
+                                <div class="operateDiv">
+                                    <span class="writeTime">2018-1-26 15:57:59</span>
+                                    <div class="operate">
+                                        <a href="javascript:void(0);" class="del delS">删除</a>
+                                        <a href="javascript:void(0);" class="reply">回复</a>
+                                        <a href="javascript:void(0);" class="praise">1111</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="replyList">
+                                <div class="replyDiv">
+                                    <div class="replyOne">
+                                        <div class="myReply">
+                                            <div class="replyPerson">
+                                                <span class="userName">water</span>
+                                                <span>回复</span>
+                                                <span class="other">@张三:</span>
+                                            </div>
+                                            <div class="replyContent">vasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+                                        </div>
+                                        <div class="replyOther">
+                                            <span class="replyTime">2018-1-26 15:58:26</span>
+                                            <div class="operate">
+                                                <a href="javascript:void(0);" class="del delL">删除</a>
+                                                <a href="javascript:void(0);" class="reply">回复</a>
+                                                <a href="javascript:void(0);" class="praise">11</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hotPlayDiv">
+                <h2>热门搜索</h2>
+                <div>
+                    <ul class="hotSearch">
+                        <li><a href="javascript:;">NO.1</a></li>
+                        <li><a href="javascript:;">NO.2</a></li>
+                        <li><a href="javascript:;">NO.3</a></li>
+                        <li><a href="javascript:;">NO.4</a></li>
+                        <li><a href="javascript:;">NO.5</a></li>
+                        <li><a href="javascript:;">NO.6</a></li>
+                        <li><a href="javascript:;">NO.7</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="maskDiv" class="maskDiv"></div>
+    <div id="logRegDiv"></div>
+    <script type="text/javascript">
+        $(function(){
+            //音量的初始化
+            var widthhh = $(".vjs-volume-bar.vjs-slider").attr("aria-valuetext");
+            $(".vjs-volume-ll").text(widthhh);
+            //回复的内容框
+            var replyContent = $(".replyContent");
+            var replyPerson = $(".replyPerson");
+            var userPersonHeight = (parseInt(replyContent.css("height"))+12)+'px';
+            replyPerson.css({"height":userPersonHeight,"line-height":userPersonHeight});
+            // 加载视频
+            var data = window.location.search.split("=")[1];
+            var url = "http://zmhwater.vicp.io/videos/1";
+            $.ajaxGet(url,function(result){
+                var videoSrc = result.video_path+"/wangyetransfer.mp4";
+                var sourceDom = $('<source src="'+videoSrc+'" type="video/mp4"/>');
+                $("#example_video_1_html5_api").prepend(sourceDom);
+                $("#example_video_1_html5_api").show();
+                console.log(result)
+            },false,'id='+data+'');
+        })
+
+    </script>
+</body>
+</html>

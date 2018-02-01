@@ -1,0 +1,10 @@
+header, section, footer, aside, nav, article, figure
+{ 
+    display: block; 
+}
+input,select,option,textarea,button{outline: none;}
+*{margin: 0;padding: 0;}
+li{list-style: none;font-size: 14px;}
+a{text-decoration: none;color: #000;font-size: 14px; }
+textarea{resize:none;outline: none;}
+div{font-size: 14px;}

@@ -1,0 +1,433 @@
+.aa{
+	height: 80px;
+	width: 100%;
+	background: #7B99C8;
+	position: fixed;
+	left: 0;
+	top: 0;
+	box-shadow: 0 2px 5px #C9C8DA;
+	z-index: 100;
+}
+.videoPlay{
+	width: 100%;
+	height: 672px;
+	margin-top: 85px;
+	background: #D1E6E5;
+}
+.videoPlay .videoPlayCenter{
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+}
+.videoPlay .videoPlayCenter .video-js{
+	float: left;
+	box-shadow: 5px 0px 5px #D5DDF0;
+
+}
+.videoPlay .videoPlayCenter .recommendDiv{
+	width: 395px;
+	height: 600px;
+	background: #ACB1EB;
+	float: left;
+	margin-left: 5px;
+	box-sizing: border-box;
+}
+.videoPlay .videoPlayCenter .recommendDiv h2{
+	margin:20px 20px 15px 20px;
+}
+.videoPlay .videoPlayCenter .recommendDiv .prev{
+	width: 340px;
+	height: 50px;
+	margin: 0 auto;
+	background: url(../image/toPrev.png) no-repeat center center;
+	background-color: rgba(239,234,234,0.3);
+	border-radius: 30px;
+}
+.videoPlay .videoPlayCenter .recommendDiv .prev:hover,.videoPlay .videoPlayCenter .recommendDiv .next:hover{
+	background-color: rgba(239,234,234,0.5);
+
+}
+.videoPlay .videoPlayCenter .recommendDiv .next{
+	width: 340px;
+	height: 50px;
+	margin: 0 auto;
+	background: url(../image/toNext.png) no-repeat center center;
+	background-color: rgba(239,234,234,0.3);
+	border-radius: 30px;
+}
+.videoPlay .videoPlayCenter .recommendDiv .prev img{
+	
+}
+.videoPlay .videoPlayCenter .recommendDiv .commendContent{
+	margin: 10px auto;
+}
+.videoPlay .videoPlayCenter .recommendDiv .commendContent li{
+	width: 345px;
+	height: 120px;
+	background: red;
+	margin:16px auto;
+}
+
+/*评论*/
+.userSelf>div{
+	width: 78px;
+	height: 78px;
+	line-height: 78px;
+	float: left;
+}
+.loginDiv,.registerDiv{
+	display: inline-block;
+	width: 30px;
+	height: 100%;
+	cursor: pointer;
+}
+.commentHotPlay{
+	width: 100%;
+}
+.commentHotPlay .commentHotPlayDiv{
+	width: 1200px;
+	margin: 20px auto;
+}
+.commentDiv{
+	float: left;
+	width: 800px;
+	padding: 20px 20px 0 20px;
+	border: 1px solid #ededed;
+	overflow: hidden;
+	box-sizing: border-box;
+	box-shadow: 5px 0px 5px #D5DDF0;
+	background: rgba(222,222,222,0.1);
+	position: relative;
+	padding-bottom: 100px;
+}
+.introVideoDiv{
+	width: 100%;
+	overflow: hidden;
+}
+.introVideoDiv>div{
+	margin-bottom: 15px;
+}
+.introVideoDiv .author i{
+	font-style: normal;
+	font-size: 16px;
+}
+.introVideoDiv .author b{
+	float: right;
+	margin-right: 10px;
+	width: 40px;
+	height: 30px;
+	line-height: 35px;
+	padding-left: 35px;
+	font-weight: normal;
+	cursor: pointer;
+}
+.introVideoDiv .author .collect{
+	background: url(../image/collect.png) no-repeat 1px 2px;
+
+}
+.introVideoDiv .author .collectHover{
+	background: url(../image/collecthover.png) no-repeat 1px 2px;
+	color: #318ee3;
+}
+.introVideoDiv .author .download{
+	background: url(../image/download.png) no-repeat 1px 2px;
+}
+.introVideoDiv .author .downloadHover{
+	background: url(../image/downloadhover.png) no-repeat 1px 2px;
+	color: #318ee3
+}
+
+.introVideoDiv .videoIntro span{
+	font-size: 16px;
+}
+.introVideoDiv .videoIntro i{
+	font-style: normal;
+	width: 100%;
+	height: 100%;
+	word-wrap: break-word;
+	word-break: normal; 
+	border: 1px solid #c6c8ce;
+	box-shadow: inset 0 0 8px rgba(182,195,214,0.6);
+	display: block;
+	padding: 10px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	margin: 15px auto;
+}
+.introVideoDiv .commentWord{
+	width: 738px;
+	height: 30px;
+	background: rgba(167,163,205,0.8);
+	color: #fff;
+	padding: 10px;
+	border-radius: 3px;
+}
+.commentArea{
+	width: 100%;
+	height: 184px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 15px;
+}
+.userSelf{
+	position: relative;
+	width: 90px;
+}
+.userImg{
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	padding: 15px;
+	float: left;
+}
+.userSelf .self{
+	color: #000;
+	position: absolute;
+	left: 0px;
+	top: 70px;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+}
+.commentInput{
+	width: 660px;
+	height: 100px;
+	font-size: 16px;
+	padding: 15px;
+	margin-left: 20px;
+	border: 1px solid #c6c8ce;
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	box-sizing: border-box;
+	box-shadow: inset 0 0 8px rgba(182,195,214,0.6);
+	display: inline-block;
+}
+.commentInputFocus {
+	border: 1px solid #C4A4D6;
+	box-shadow: inset 0 0 8px rgba(0,136,170,0.5)
+}
+.wordNum,.cBtn{
+	display: inline-block;
+	float: right;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 20px;
+}
+.numChange{
+	font-style: normal;
+}
+.cBtn{
+	background: #A7A3CD;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+}
+.userComment{
+	margin-left: 30px;
+	float: left;
+}
+.commentPer{
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+.commentPer .userMes{
+	float: left;
+	padding: 15px 0 20px 20px;
+	width: 630px;
+}
+.commentPer .userMes .userBlock{
+	height: 60px;
+	margin-bottom: 10px;
+}
+.commentPer .userMes .userBlock .userAbout{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+}
+.userName{
+	color: #A7A3CD;
+}
+.commentPer .userMes .userAbout i{
+	font-style: normal;
+	color: #000;
+}
+.commentPer .userMes .userBlock .operateDiv{
+	margin-top: 5px;
+	height: 30px;
+	line-height: 30px;
+}
+.operate{
+	position: relative;
+	float: right;
+	width: 200px;
+}
+.operate a{
+	display: inline-block;
+}
+.operateDiv span{
+	display: inline-block;
+	float: left;
+	color: #898787;
+}
+.operate .del{
+	margin-right: 20px;
+	display: none;
+	position: absolute;
+	left: -55px;
+}
+.operate .del,.operate .reply,.operate .praise{
+	color: #898787;
+}
+.operate .del{
+	background: url(../image/del.png) no-repeat 0 6px;
+	padding-left: 20px;
+}
+.operate .praise{
+	background: url(../image/icon-all_01.png) no-repeat 0px -192px;
+	padding-left: 40px;	 
+	width: 75px;
+	display: inline-block;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+}
+.operate .praiseCheck{
+	color: #E5B7B7;
+	background-position: 0px -113px;
+}
+.operate .reply{
+	position: absolute;
+	right: 120px;
+}
+.childComment{
+	margin-top: 10px;
+	border-bottom: 1px solid #fff;
+}
+.childText{
+	width: 610px;
+}
+.userMes .replyList{
+	width: 100%;
+}
+.replyList .replyDiv{
+	overflow: hidden;
+}
+.replyList .replyDiv .replyOne{
+	margin-left: 20px;
+	background: rgba(218,209,209,0.5);
+	margin-bottom: 5px;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.replyList .replyDiv .replyOne .replyPerson{
+	height: 25px;
+	line-height: 25px;
+	float: left;
+}
+.replyList .replyDiv .replyOne .replyContent{
+	width: 450px;
+	min-height: 25px;
+	line-height: 25px;
+	margin-right: 5px;
+	float: right;
+	border: 1px solid #A0B9CF;
+	padding:5px;
+	box-shadow: inset 0px 0px 5px #A0B9CF;
+	/*自动换行*/
+	word-wrap: break-word;
+	word-break: normal; 
+}
+.replyList .replyDiv .replyOne .replyOther{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+}
+.replyDiv .myReply .userName,.replyDiv .myReply .other{
+	color: #A7A3CD;
+}
+
+.replyDiv .replyOther span{
+	color: #898787;
+}
+.commentInput:focus{
+	border: 1px solid #C4A4D6;
+	box-shadow: inset 0 0 8px rgba(0,136,170,0.5)
+}
+
+/*热门搜索*/
+.hotPlayDiv{
+	float: right;
+	width: 395px;
+	height: 600px;
+	margin-left: 5px;
+	border: 1px solid red;
+	box-sizing: border-box;
+}
+.hotPlayDiv h2{
+	margin: 20px 20px 15px 20px;
+}
+.hotPlayDiv div{
+	width: 90%;
+	margin: 0 auto;
+}
+.hotPlayDiv ul.hotSearch li{
+	width: 100%;
+	height: 50px;
+	border: 1px solid blue;
+	margin-bottom: 5px;
+}
+
+/*视频导航*/
+.navHeader{
+	width: 100%;
+	height: 70px;
+	border: 1px solid red;
+	background: #fff;
+}
+.navHeader .navLeft{
+	float: left;
+	padding-left: 70px;
+	line-height: 70px;
+	font-size: 18px;
+	background: url(../image/navLogo1.png) no-repeat left center;
+}
+.navHeader .navRight{
+	float: right;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 19px;
+	text-align: center;
+	border:1px solid #ccd0d7;
+	border-radius: 10px;
+	font-size: 12px;
+	color: #555;
+	padding-left: 15px;
+	padding-right: 30px;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.navHeader .navRight:hover{
+	padding-left: 5px;
+	width: 50px;
+	background-color: #ccc;
+}
+.navHeader .navRight .icon{
+	background: url(../image/arr_l.png) no-repeat;
+	width: 9px;
+	height: 15px;
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	transition: all 0.3s;
+}
+.navHeader .navRight:hover .icon{
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}
